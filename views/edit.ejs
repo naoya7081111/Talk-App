@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/">初めての掲示板</a>
+    </header>
+
+    <div class="body-wrap">
+        <div class="container">
+            <div class="content-header">
+                <h1>題目</h1>
+            </div>
+            <div class="new-body">
+                <form action="/update/<%= item.id %>" method="post" class="post-table">
+                    <input type="text" name="itemUsername" value="<%= item.username %>"  class="name-form">
+                    <textarea name="itemContent" cols="50" rows="10"  value="<%= item.content %>" class="content-form"><%= item.content %></textarea>
+                    <input type="submit" value="更新する"  class="send-form">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
